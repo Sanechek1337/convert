@@ -1,17 +1,19 @@
-//Через for
+//Через for и while
 
 fun main() {
-    var example = "Д-4 сс"
-    var rWords = listOf(" ", "-", "(", ")", "1", "2", "3", "4", "Д", "О", "В", "И", "Н", "Ф", "К", "Р", "П", "М", "С", "Т", "с", "Я")
-    var eWords = listOf(" ", "-", "(", ")", "1", "2", "3", "4", "d", "o", "v", "i", "n", "f", "k", "r", "p", "m", "s", "T", "s", "y", "a")
+    var example = "ИЯ-32"
+    var rWords = listOf("Д", "О", "В", "И", "Н", "Ф", "К", "Р", "П", "М", "С", "Т", "с", "Я")
+    var eWords = listOf("d", "o", "v", "i", "n", "f", "k", "r", "p", "m", "s", "T", "s", "y", "a")
     var finStr = " "
 
     //Цикл прогоняет всю строку
     for (element in example) {
+        var j = 0
         //Проверка нужного символа на совпадения
-        for(j in rWords.indices) {
+        while (j < rWords.size) {
             if (rWords[j] == element.toString()) {
-                if (j == 21) {
+                //Для буквы Я
+                if (j == 13) {
                     finStr += eWords[j]
                     finStr += eWords[j+1]
                     break
@@ -19,6 +21,10 @@ fun main() {
                 finStr += eWords[j]
                 break
             }
+            j++
+        }
+        if (j > 13) {
+            finStr += element
         }
     }
 

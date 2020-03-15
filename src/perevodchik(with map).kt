@@ -1,7 +1,7 @@
-//
+//Map вместо list
 
 fun main() {
-    var example = "Д-4 сс"
+    var example = "ИЯ-32"
     val words = mapOf<Char, String> (
         'В' to "v", 'Д' to "d", 'И' to "i", 'К' to "k", 'М' to "m",
         'Н' to "n", 'О' to "o", 'П' to "p", 'Р' to "r", 'С' to "s",
